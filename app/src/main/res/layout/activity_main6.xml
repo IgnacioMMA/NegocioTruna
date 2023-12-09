@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity6">
+
+    <!-- Category 1 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDulces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Category Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galletas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- HorizontalScrollView for Items -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- LinearLayout for Items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item 1 (Galleta 1) -->
+                <ImageView
+                    android:id="@+id/imgGalleta1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/galleta1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesGalleta1"/>
+
+                <!-- Item 2 (Galleta 2) -->
+                <ImageView
+                    android:id="@+id/imgGalleta2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/galleta2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesGalleta2"/>
+
+                <!-- Item 3 (Galleta 3) -->
+                <ImageView
+                    android:id="@+id/imgGalleta3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/galleta3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesGalleta3"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Category 2 (Helados) -->
+    <LinearLayout
+        android:id="@+id/linearLayoutHelados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Category Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Helados"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- HorizontalScrollView for Items -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- LinearLayout for Items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item 1 (Helado 1) -->
+                <ImageView
+                    android:id="@+id/imgHelado1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/helado1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesHelado1"/>
+
+                <!-- Item 2 (Helado 2) -->
+                <ImageView
+                    android:id="@+id/imgHelado2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/helado2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesHelado2"/>
+
+                <!-- Item 3 (Helado 3) -->
+                <ImageView
+                    android:id="@+id/imgHelado3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/helado3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesHelado3"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Category 3 (Chocolates) -->
+    <LinearLayout
+        android:id="@+id/linearLayoutChocolates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Category Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolates"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- HorizontalScrollView for Items -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- LinearLayout for Items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item 1 (Chocolate 1) -->
+                <ImageView
+                    android:id="@+id/imgChocolate1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/chocolate1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesChocolate1"/>
+
+                <!-- Item 2 (Chocolate 2) -->
+                <ImageView
+                    android:id="@+id/imgChocolate2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/chocolate2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesChocolate2"/>
+
+                <!-- Item 3 (Chocolate 3) -->
+                <ImageView
+                    android:id="@+id/imgChocolate3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/chocolate3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Item Image"
+                    android:onClick="abrirDetallesChocolate3"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+    <!-- Message TextView -->
+    <TextView
+        android:id="@+id/txtMensajeCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

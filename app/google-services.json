@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497688960411",
+    "project_id": "negociotruna",
+    "storage_bucket": "negociotruna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497688960411:android:97122e47d2a75e19e4d53e",
+        "android_client_info": {
+          "package_name": "izan.example.negociotruna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAn7v63ZL0QPcdpxngydt2lXBy73CliiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
