@@ -1,6 +1,7 @@
 // MainActivity5.java
 package izan.example.negociotruna;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +31,7 @@ public class MainActivity5 extends AppCompatActivity {
             txtNombreDulce.setText(nombreDulce);
             txtPrecioDulce.setText(String.format("$%.2f", precioDulce));
 
-            // Configura el botón para realizar la compra (puedes agregar la lógica de compra aquí)
+            // Configura el botón para realizar la compra
             Button btnComprar = findViewById(R.id.btnComprar);
             unidades.setMaxValue(99);
             unidades.setMinValue(1);
@@ -40,9 +41,21 @@ public class MainActivity5 extends AppCompatActivity {
                 public void onClick(View v) {
                     int cantidadUnidades = unidades.getValue();
                     double totalCompra = cantidadUnidades * precioDulce;
-                    Toast.makeText(MainActivity5.this, "Compra realizada con exito", Toast.LENGTH_SHORT).show();
+
+                    // Envia los datos de la compra a MainActivity4 y luego inicia la actividad
+                    enviarDatosCompra(MainActivity5.this, nombreDulce, cantidadUnidades, totalCompra);
                 }
             });
         }
+    }
+
+    private void enviarDatosCompra(MainActivity5 activity, String nombreDulce, int cantidadUnidades, double totalCompra) {
+        Intent intent = new Intent(activity, MainActivity4.class);
+        intent.putExtra("nombreDulce", nombreDulce);
+        intent.putExtra("cantidadUnidades", cantidadUnidades);
+        intent.putExtra("totalCompra", totalCompra);
+        Toast.makeText(MainActivity5.this, "Compra realizada con éxito", Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);  // Inicia la actividad después de enviar los datos
     }
 }

@@ -1,0 +1,36 @@
+<!-- activity_main4.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:id="@+id/txtNombreDulceCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Dulce"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtCantidadUnidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de Unidades"
+        android:textSize="18sp"
+        android:layout_below="@id/txtNombreDulceCompra"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtTotalCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total de la Compra"
+        android:textSize="18sp"
+        android:layout_below="@id/txtCantidadUnidades"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

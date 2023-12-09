@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="245dp"
-        android:layout_height="62dp"
+        android:layout_width="243dp"
+        android:layout_height="94dp"
         android:text="BIENVENIDO A TRUNA"
         android:textAlignment="center"
         android:textSize="34sp"

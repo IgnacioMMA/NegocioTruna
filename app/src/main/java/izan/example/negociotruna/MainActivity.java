@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
-import izan.example.negociotruna.MainActivity2;
-import izan.example.negociotruna.R;
-
 public class MainActivity extends AppCompatActivity {
 
     private static final int SPLASH_TIMEOUT = 3000; // 3 segundos

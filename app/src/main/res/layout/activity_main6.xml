@@ -12,18 +12,18 @@
         android:id="@+id/linearLayoutDulces"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
         <!-- Category Name -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
             android:text="Galletas"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"/>
+            android:textStyle="bold" />
 
         <!-- HorizontalScrollView for Items -->
         <HorizontalScrollView
@@ -41,30 +41,30 @@
                     android:id="@+id/imgGalleta1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/galleta1"
-                    android:scaleType="centerCrop"
                     android:contentDescription="Item Image"
-                    android:onClick="abrirDetallesGalleta1"/>
+                    android:onClick="abrirDetallesGalleta1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/galleta1" />
 
                 <!-- Item 2 (Galleta 2) -->
                 <ImageView
                     android:id="@+id/imgGalleta2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/galleta2"
-                    android:scaleType="centerCrop"
                     android:contentDescription="Item Image"
-                    android:onClick="abrirDetallesGalleta2"/>
+                    android:onClick="abrirDetallesGalleta2"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/galleta2" />
 
                 <!-- Item 3 (Galleta 3) -->
                 <ImageView
                     android:id="@+id/imgGalleta3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/galleta3"
-                    android:scaleType="centerCrop"
                     android:contentDescription="Item Image"
-                    android:onClick="abrirDetallesGalleta3"/>
+                    android:onClick="abrirDetallesGalleta3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/galleta3" />
 
             </LinearLayout>
         </HorizontalScrollView>
@@ -195,11 +195,30 @@
     </LinearLayout>
 
 
-    <!-- Message TextView -->
     <TextView
         android:id="@+id/txtMensajeCompra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Tienda"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ImgTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:contentDescription="Tienda Button"
+        android:onClick="irAMainActivity7"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/tienda" />
+
 </LinearLayout>

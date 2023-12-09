@@ -1,8 +1,11 @@
+// MainActivity6.java
 package izan.example.negociotruna;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +16,21 @@ public class MainActivity6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
 
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        ImageView ImgTienda = findViewById(R.id.ImgTienda);
         // Configura el clic en las imágenes de galletas
         ImageView imgGalleta1 = findViewById(R.id.imgGalleta1);
+        ImgTienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity6.this, MainActivity7.class);
+                startActivity(intent);
+            }
+        });
         imgGalleta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("CocoChip", "$350.00");
+                abrirDetallesDulce("CocoChip", "$350");
             }
         });
 
@@ -26,7 +38,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgGalleta2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Cracker", "$250.00");
+                abrirDetallesDulce("Cracker", "$250");
             }
         });
 
@@ -34,7 +46,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgGalleta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Soda", "$300.00");
+                abrirDetallesDulce("Soda", "$300");
             }
         });
 
@@ -43,7 +55,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgHelado1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Chirimolla", "$400.00");
+                abrirDetallesDulce("Chirimolla", "$400");
             }
         });
 
@@ -51,7 +63,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgHelado2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Twingo (Milano)", "$450.00");
+                abrirDetallesDulce("Twingo (Milano)", "$450");
             }
         });
 
@@ -59,7 +71,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgHelado3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Palito Frambuesa", "$400.00");
+                abrirDetallesDulce("Palito Frambuesa", "$400");
             }
         });
 
@@ -68,7 +80,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgChocolate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Milka", "$1500.00");
+                abrirDetallesDulce("Milka", "$1500");
             }
         });
 
@@ -76,7 +88,7 @@ public class MainActivity6 extends AppCompatActivity {
         imgChocolate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Vizzio", "$2000.00");
+                abrirDetallesDulce("Vizzio", "$2000");
             }
         });
 
@@ -84,16 +96,18 @@ public class MainActivity6 extends AppCompatActivity {
         imgChocolate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirDetallesDulce("Sahne Nuss", "$3000.00");
+                abrirDetallesDulce("Sahne Nuss", "$3000");
             }
         });
-    }
 
+
+
+    }
     // Función para abrir la actividad de detalles del dulce
     private void abrirDetallesDulce(String nombre, String precio) {
         Intent intent = new Intent(this, MainActivity5.class);
         intent.putExtra("nombre", nombre);
-        intent.putExtra("precio", Double.parseDouble(precio.substring(1))); // Parsea el precio a double
+        intent.putExtra("precio", Double.parseDouble(precio.substring(1)));
         startActivity(intent);
     }
 }
